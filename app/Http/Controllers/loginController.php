@@ -91,7 +91,7 @@ class loginController extends Controller
 
       $userData = User::where('id','=',$loginId)->select('id','username')->first();
 
-      return view('dashboard',compact('userData'));
+      return view('dashboard.dashboard',compact('userData'));
     }
     return redirect()->route('loginPage');
 

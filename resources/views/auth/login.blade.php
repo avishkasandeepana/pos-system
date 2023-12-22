@@ -19,6 +19,8 @@
 </head>
 
 <body>
+    @viteReactRefresh
+    @vite('resources/js/app.js')
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">

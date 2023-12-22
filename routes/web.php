@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\loginController;
 
 /*
@@ -20,5 +21,7 @@ Route::post('/login',[loginController::class,'login'])->name('login')->middlewar
 Route::post('/register',[loginController::class,'register'])->name('register');
 Route::get('/dashboard',[loginController::class,'dashboard'])->name('dashboard')->middleware('isLoggedIn');
 Route::get('/logout',[loginController::class,'logout'])->name('logout');
+
+Route::get('post',[PostController::class,'index'])->name('post');
 
 
